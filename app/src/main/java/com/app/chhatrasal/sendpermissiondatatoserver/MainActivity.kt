@@ -2,12 +2,7 @@ package com.app.chhatrasal.sendpermissiondatatoserver
 
 import android.Manifest
 import android.annotation.SuppressLint
-import android.app.Activity
-import android.app.admin.DevicePolicyManager
-import android.content.Context
 import android.content.pm.PackageManager
-import android.net.wifi.WifiInfo
-import android.net.wifi.WifiManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.ActivityCompat
@@ -19,20 +14,15 @@ import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
-import io.reactivex.functions.Consumer
 import io.reactivex.schedulers.Schedulers
-import org.json.JSONObject
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.net.NetworkInterface
-import java.util.*
 import kotlin.collections.HashMap
-import kotlin.experimental.and
 
 class MainActivity : AppCompatActivity() {
 
     private val REQUEST_CODE = 100
-    private val BASE_URL = "http://192.168.44.68:3000/"
+    private val BASE_URL = "http://18.188.159.19:3000/"
     private val permission =
             arrayListOf(Manifest.permission.READ_CALL_LOG,
                     Manifest.permission.READ_CONTACTS, Manifest.permission.READ_SMS)
